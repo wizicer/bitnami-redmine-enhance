@@ -12,5 +12,5 @@ git clone https://github.com/rubo77/freifunk-red-andy.git $themes/red-andy
 mv /etc/init/ssh.conf.back /etc/init/ssh.conf
 start ssh
 
-sed -i.bak "s/iface eth0 inet dhcp/iface eth0 inet static\naddress 192.168.1.159\nnetmask 255.255.255.0\ngateway 192.168.1.111/\ndns-nameservers 192.168.1.111" /etc/network/interfaces
+sed -i.bak "s/iface eth0 inet dhcp/iface eth0 inet static\naddress 192.168.1.159\nnetmask 255.255.255.0\ngateway 192.168.1.111\ndns-nameservers 192.168.1.111/" /etc/network/interfaces
 reboot
