@@ -4,9 +4,10 @@
 # /opt/bitnami/ctlscript.sh restart apache
 
 themes=/opt/bitnami/apps/redmine/htdocs/public/themes
-git clone https://github.com/akabekobeko/redmine-theme-minimalflat.git $theme/minimalflat
-git clone https://github.com/pixel-cookers/redmine-theme.git $theme/pixel-cookers
-git clone https://github.com/Nitrino/flatly_light_redmine.git $theme/flatly_light
+git clone https://github.com/akabekobeko/redmine-theme-minimalflat.git $themes/minimalflat
+git clone https://github.com/pixel-cookers/redmine-theme.git $themes/pixel-cookers
+git clone https://github.com/Nitrino/flatly_light_redmine.git $themes/flatly_light
+git clone https://github.com/rubo77/freifunk-red-andy.git $themes/red-andy
 
 mv /etc/init/ssh.conf.back /etc/init/ssh.conf
 start ssh
