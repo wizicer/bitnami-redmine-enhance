@@ -1,9 +1,19 @@
 #! /bin/sh
+if [ -n "$1" ]; 
+then 
+    echo one parameter required: password;
+fi
+redminedir=/opt/bitnami/apps/redmine
+themes=$redminedir/htdocs/public/themes
+configdir=$redminedir/htdocs/config
+
+cp configuration.yml $configdir/configuration.yml
+
+sed -i.bak "s/password: 3ezTgF3eQG/password: $1/" $configdir/configuration.yml
 
 /opt/bitnami/apps/redmine/bnconfig --disable_banner 1
 # /opt/bitnami/ctlscript.sh restart apache
 
-themes=/opt/bitnami/apps/redmine/htdocs/public/themes
 git clone https://github.com/akabekobeko/redmine-theme-minimalflat.git $themes/minimalflat
 git clone https://github.com/pixel-cookers/redmine-theme.git $themes/pixel-cookers
 git clone https://github.com/Nitrino/flatly_light_redmine.git $themes/flatly_light
