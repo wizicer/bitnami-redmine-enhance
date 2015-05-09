@@ -1,7 +1,5 @@
 #! /bin/sh
 password=$(grep "password:" /opt/bitnami/apps/redmine/htdocs/config/database.yml|awk -F':' '{print $2}'|awk '{print $1}'|head -n 1)
-echo $password
-exit 0
 
 # required settings 
 DB_USERNAME='bitnami'
