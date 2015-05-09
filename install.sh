@@ -1,5 +1,5 @@
 #! /bin/sh
-if [ -n "$1" ]; 
+if [ -z "$1" ]; 
 then 
     echo one parameter required: password;
 fi
